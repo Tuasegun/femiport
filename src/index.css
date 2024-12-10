@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  --mantine-max-width: 1920px;
+  --mantine-content-width: 1440px;
+}
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Container classes that work with Mantine */
+.mantine-container-ultra {
+  width: 100%;
+  max-width: var(--mantine-max-width);
+  margin: 0 auto;
+  padding-left: var(--mantine-spacing-md);
+  padding-right: var(--mantine-spacing-md);
+}
+
+.mantine-content-container {
+  width: 100%;
+  max-width: var(--mantine-content-width);
+  margin: 0 auto;
+  padding-left: var(--mantine-spacing-md);
+  padding-right: var(--mantine-spacing-md);
+}
+
+/* Media queries that work with Mantine's breakpoints */
+@media (min-width: 90em) {  /* 1440px */
+  .mantine-container-ultra {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+
+@media (min-width: 120em) {  /* 1920px */
+  .mantine-container-ultra {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  /* Better text readability for ultra-wide */
+  .mantine-text-container {
+    max-width: 70ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 160em) {  /* 2560px */
+  .mantine-container-ultra {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+}
+
+/* Utility classes */
+.mantine-responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.mantine-aspect-ratio {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.mantine-aspect-ratio iframe,
+.mantine-aspect-ratio video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Fixed position handling */
+.mantine-fixed-element {
+  position: fixed;
+  max-width: var(--mantine-max-width);
+  left: 50%;
+  transform: translateX(-50%);
+}
